@@ -39,6 +39,8 @@ nav > ul > li > a {
 .input-field {
   border: 2px solid black;
   padding: 12px 20px;
+  margin: 20px;
+  text-align:center;
 }
 
 .news-card-headline{

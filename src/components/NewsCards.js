@@ -1,8 +1,6 @@
 import React from "react";
 
 const NewsCards = ({ newsInfo }) => {
-  console.log("newsInfo = ", newsInfo);
-
   if(!newsInfo) {
     return <h1> Search for news topic!</h1>
   }

@@ -8,12 +8,12 @@ const Body = () => {
       <input
         type="text"
         value={searchText}
-        className="border"
+        className="input-field"
         onChange={(e) => {
           setSearchText(e.target.value);
         }}
       />
-      <NewsCardContainer searchText={searchText} />;
+      <NewsCardContainer searchText={searchText} />
     </>
   );
 };

@@ -9,7 +9,7 @@ const NewsCardContainer = ({ searchText }) => {
     );
 
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setNewsInfo(json.articles);
   };
 
@@ -17,18 +17,18 @@ const NewsCardContainer = ({ searchText }) => {
     fetchData();
   }, [searchText]);
 
-  console.log(searchText);
+  // console.log(searchText);
 
   const [newsInfo, setNewsInfo] = useState([]);
 
   return (
     <>
-      <h1>{searchText}</h1>
+      <h1 className="news-card-headline">{searchText}</h1>
       <div className="news-card-container">
         <NewsCards newsInfo={newsInfo} />
       </div>
     </>
-  );
+  )
 };
 
 export default NewsCardContainer;
