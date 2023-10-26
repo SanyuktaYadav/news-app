@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import NewsCards from "./NewsCards";
 
 const NewsCardContainer = ({ searchText }) => {
+  const [newsInfo, setNewsInfo] = useState([]);
+
   const fetchData = async () => {
     const data = await fetch(
       "https://newsapi.org/v2/top-headlines?apiKey=30971b94d1424bb0819ded28883a569b&q=" +
@@ -16,10 +18,6 @@ const NewsCardContainer = ({ searchText }) => {
   useEffect(() => {
     fetchData();
   }, [searchText]);
-
-  // console.log(searchText);
-
-  const [newsInfo, setNewsInfo] = useState([]);
 
   return (
     <>
