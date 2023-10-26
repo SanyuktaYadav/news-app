@@ -11,7 +11,7 @@ const NewsCardContainer = ({ searchText }) => {
     );
 
     const json = await data.json();
-    // console.log(json);
+
     setNewsInfo(json.articles);
   };
 
